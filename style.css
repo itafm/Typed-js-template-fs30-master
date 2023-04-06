@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+
+::selection{
+    background-color: #f5df4e;
+    color: #fff;
+}
+
+header{
+    background-image: url('images/intro-bg.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header #overlay{
+    background-color: rgba(0, 0, 0, .8);
+    height: 100vh;
+    color: #fff;
+ }
+
+header #overlay nav, .header-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #overlay nav{
+    width: calc(100% - 200px);
+    margin: auto;    
+    height: 100%;
+}
+
+header #overlay .navigation{
+    height: 70px;
+    position: fixed;
+    width: 100%;
+}
+
+header #overlay .navigation .header-logo h3{
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.header-menu .header-menu-tel i.bi::before{
+    rotate: 260deg;
+    vertical-align: -0.1em;
+}
+
+.header-menu .header-menu-tel p{
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-right: 30px;
+}
+
+.header-menu .header-menu-icon, header .nav-menu .icon-close{
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.navigation-dark{
+    background-color: #000;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+header .nav-menu{
+    position: absolute;
+    inset: 0;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     display: none;
+}
+
+header .nav-menu .menu{
+    background-color: rgba(0, 0, 0, .8);
+    position: relative;
+    padding: 100px 0;
+}
+
+header .nav-menu .menu ul {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 150px;
+}
+
+header .nav-menu .menu ul li {
+    margin: 20px 0;
+}
+
+header .nav-menu .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3em;
+    transition: all .5s ;
+}
+
+header .nav-menu .icon-close {
+    font-size: 3em;
+    position: absolute;
+    top: 0;
+    right: 100px;
+    z-index: 99;
+}
+
+header .nav-menu .menu ul li a.active, 
+header .nav-menu .menu ul li a:hover{
+    color: #f5df4e;
+}
+
+header .header-content .header-content-center{
+    width: 700px;
+    margin: auto;
+    text-align: center;
+    padding: 200px 0;
+}
+
+.header-content-center h3{
+    font-size: 2em;
+}
+.header-content-center span#element{
+    font-size: 6em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.header-content-center .typed-cursor{
+    font-size: 6em;
+    margin-left: 30px;
+}
+
+
+@media screen and (max-width: 800px) {
+    header #overlay nav{
+        width: calc(100% - 50px);
+    }
+
+    header .nav-menu .icon-close{
+        right: 10px;
+    }
+}
